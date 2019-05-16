@@ -8,7 +8,8 @@
     "test-watch": "tsc --noUnusedParameters --noUnusedLocals && karma start --no-single-run --auto-watch",
     "commit": "npm run prepublish && npm test && git-cz",
     "build": "npm run clean && ngc && ng-packagr -p ng-package.json && cp style.css dist/bundles/style.css && rimraf dist/tests",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "install": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -47,8 +48,8 @@
   },
   "devDependencies": {
     "@angular/common": "^7.2.3",
-    "@angular/compiler": "^7.2.3",
-    "@angular/compiler-cli": "^7.2.3",
+    "@angular/compiler": "^7.2.15",
+    "@angular/compiler-cli": "^7.2.15",
     "@angular/core": "^7.2.3",
     "@angular/forms": "^7.2.3",
     "@angular/platform-browser": "^7.2.3",
@@ -78,9 +79,10 @@
     "rxjs-compat": "^6.4.0",
     "source-map-loader": "^0.2.1",
     "ts-helpers": "1.1.2",
+    "tsickle": "^0.35.0",
     "tslint": "^5.4.3",
     "tslint-loader": "^3.5.3",
-    "typescript": "^3.2.4",
+    "typescript": "~3.2.4",
     "webpack": "^3.6.0",
     "zone.js": "^0.8.26"
   },
